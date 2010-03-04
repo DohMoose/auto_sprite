@@ -31,6 +31,8 @@ module AutoSprite
     end
 
     def setup!
+      return if @@skip_setup
+      puts "setting up"
       FileUtils::mkdir_p(SPRITE_ASSETS_PATH)
       if stale?      
         FileUtils::rm_f(CSS_FILE_PATH)   
@@ -55,6 +57,10 @@ module AutoSprite
           f << "{display:inline-block;background-image:url('#{SPRITE_IMG_URL}');background-repeat:no-repeat;}"
         end
       end
+    end
+    
+    def skip_setup_on(*environments)
+      @@skip_setup = environments.map(&:to_s).include?(RAILS_ENV)
     end
   end
 end
