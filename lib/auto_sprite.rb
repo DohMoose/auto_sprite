@@ -32,7 +32,6 @@ module AutoSprite
 
     def setup!
       return if @@skip_setup
-      puts "setting up"
       FileUtils::mkdir_p(SPRITE_ASSETS_PATH)
       if stale?      
         FileUtils::rm_f(CSS_FILE_PATH)   
