@@ -1,10 +1,10 @@
 spec = Gem::Specification.new do |s|
 
 require 'fileutils'
-  s.name = "auto_sprite"
-  s.version = "1.1.0"
-  s.author = "Stephen Blackstone"
-  s.email = "sblackstone@gmail.com"
+  s.name = "dohmoose_auto_sprite"
+  s.version = "1.1.1.pre"
+  s.authors = ["Stephen Blackstone", "Don Buchanan"]
+  s.email = ["sblackstone@gmail.com", "mail@donaldbuchanan.com"]
   s.homepage = "http://fargle.org/auto_sprite"
   s.platform = Gem::Platform::RUBY
   s.summary = "A fully-Automagic Sprite Builder"
